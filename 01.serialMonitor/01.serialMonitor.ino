@@ -1,5 +1,5 @@
 /*
-  Author: 
+  Author: Corin Barker 14/8/24
   
   Learning Intention:
   The students will understand the difference between the inbuilt setup and loop methods,
@@ -13,6 +13,7 @@
     5.  I understand `//` and `\/* *\/` comments 
   
   Student Notes: 
+  start of work at 14/8/24
 
   Documentation: 
     https://www.arduino.cc/reference/en/language/functions/communication/serial/
@@ -21,11 +22,19 @@
 
 // The setup function runs once when you press reset or power the board
 void setup() {
-
+  Serial.begin(9600);
+  Serial.print("serial moniter debug");
 }
 
 // The loop function runs over and over again forever
 void loop() {
+serial.print("pin-A0:");
+Serial.print(analog(A0));
+Serial.print (",");
+Serial.print ("Pin-A1");
+Serial.print (analogread(A1));
+Serial.print (",");
+Serial.print ("Pin-A2");
 
 }
 
